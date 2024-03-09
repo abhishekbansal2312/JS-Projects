@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    font-family: serif;
+    height: 100vh;
+    background-color: azure;
+}
+
+.button{
+    position: relative;
+    padding: 15px 30px;
+    font-size: 2rem;
+    background-color: beige;
+    display: inline-block;
+    text-decoration: none;
+    color: brown;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.8s;
+}
+
+.button:hover{
+    letter-spacing: 0.2rem;
+}
+
+#newsLetter {
+    position: fixed;  /* Specifies the positioning method for the element */
+    top: -100%;  /* Initially positions the popup off-screen above the viewport */
+    left: 50%;  /* Horizontally centers the popup relative to its containing element */
+    transform: translate(-50%, -50%);  /* Vertically centers the popup relative to its containing element */
+    background-color: bisque;  /* Sets the background color of the popup to bisque */
+    z-index: 1000;  /* Sets the stacking order of the popup */
+    width: 450px;  /* Sets the width of the popup */
+    padding: 80px 50px 50px;  /* Sets the padding of the popup */
+    transition: 0.5s;  /* Adds a smooth transition effect for changes in visibility and position */
+    border-width: 4px;  /* Sets the width of the border around the popup */
+    visibility: hidden;  /* Initially hides the popup from view */
+}
+
+#newsLetter.active {
+    visibility: visible;  /* Makes the popup visible when it has the "active" class */
+    top: 50%;  /* Positions the popup vertically centered when it has the "active" class */
+}
+#newsLetter h2{
+    text-align: center;
+    color: brown;
+    font-size: 1.6rem;
+    margin: 20px 10px;
+}
+
+#newsLetter p{
+    text-align: center;
+    color: black;
+}
+
+#newsLetter .box{
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input,button{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(0,0,0,0.1);
+    outline: none;
+    font-size: 1rem;
+    font-family: serif;
+}
+button{
+    border: none;
+    width: 50%;
+    letter-spacing: 0.1rem;
+    background-color: black;color: #fff;
+    cursor: alias;
+
+}
+.close{
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+}
