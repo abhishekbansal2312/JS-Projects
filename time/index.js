@@ -18,6 +18,7 @@ stop.addEventListener("click", function () {
   if (timeInterval) {
     clearInterval(timeInterval);
     timeInterval = null;
+    title.innerHTML = "Hello World!";
   }
 });
 // Initial call to display the date immediately
